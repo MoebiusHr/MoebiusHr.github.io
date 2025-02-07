@@ -22,8 +22,8 @@ export const siteConfig: SiteConfig = {
   slogan: "Svijet oko nas",
   description: "o istraživanju ruda i gubljenju vremena",
   social: {
-    github: "https://github.com/username", // leave empty if you don't want to show the github
-    linkedin: "https://www.linkedin.com/in/someone/", // leave empty if you don't want to show the linkedin
+    github: "", // leave empty if you don't want to show the github
+    linkedin: "", // leave empty if you don't want to show the linkedin
     email: "", // leave empty if you don't want to show the email
     rss: true, // set this to false if you don't want to provide an rss feed
   },
