@@ -18,13 +18,13 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   site: "https://example.com/", // your site url
-  title: "Your's blog",
-  slogan: "Exploring the World and Me",
-  description: "write a description here",
+  title: "Moebius",
+  slogan: "Svijet oko nas",
+  description: "o istraživanju ruda i gubljenju vremena",
   social: {
     github: "https://github.com/username", // leave empty if you don't want to show the github
     linkedin: "https://www.linkedin.com/in/someone/", // leave empty if you don't want to show the linkedin
-    email: "example@gmail.com", // leave empty if you don't want to show the email
+    email: "", // leave empty if you don't want to show the email
     rss: true, // set this to false if you don't want to provide an rss feed
   },
   homepage: {

@@ -13,9 +13,9 @@ CSS Grid is a powerful tool for creating complex layouts:
 
 ```css
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
 }
 ```
 
@@ -25,13 +25,13 @@ Variables in CSS make maintenance easier:
 
 ```css
 :root {
-  --primary-color: #3b82f6;
-  --secondary-color: #1d4ed8;
+    --primary-color: #3b82f6;
+    --secondary-color: #1d4ed8;
 }
 
 .button {
-  background-color: var(--primary-color);
-  color: white;
+    background-color: var(--primary-color);
+    color: white;
 }
 ```
 
@@ -41,10 +41,10 @@ The future of responsive design:
 
 ```css
 @container (min-width: 400px) {
-  .card {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
+    .card {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
 }
 ```
 
