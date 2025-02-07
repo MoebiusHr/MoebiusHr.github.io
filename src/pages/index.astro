@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+import BlogPreview from '../components/BlogPreview.astro'
+import SocialLinks from '../components/SocialLinks.astro'
+import { getCollection } from 'astro:content'
+import { filterPosts } from '../utils/posts'
+import { siteConfig } from '../config'
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const posts = await getCollection('blog')
+
+// Configure homepage post filtering
+const homePagePosts = filterPosts(posts, {
+  ...siteConfig.homepage,
+})
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title={siteConfig.title}>
+  <div class="text-left mb-16 mt-20">
+    <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">{siteConfig.slogan}</h1>
+    <p class="text-xl mb-8 text-gray-600 dark:text-gray-300">{siteConfig.description}</p>
+    <SocialLinks />
+  </div>
+
+  <section>
+    {homePagePosts.map((post) => <BlogPreview post={post} />)}
+  </section>
+</BaseLayout>
